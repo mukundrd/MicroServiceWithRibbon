@@ -1,0 +1,3 @@
+[submodule "git-local-config-repo"]
+	path = git-local-config-repo
+	url = git@github.com:mukundrd/git-local-config-repo.git
