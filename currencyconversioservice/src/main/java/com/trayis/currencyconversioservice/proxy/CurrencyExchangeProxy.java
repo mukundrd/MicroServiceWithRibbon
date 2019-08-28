@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.trayis.currencyconversioservice.beans.CurrencyConversionBean;
 
-@FeignClient(name = "currency-exchange-service")
+@FeignClient(name = "zuul-api-gateway")
 @RibbonClient(name = "currency-exchange-service")
 public interface CurrencyExchangeProxy {
 
-	@GetMapping("/currency-exchange/{from}/to/{to}")
+	@GetMapping("/currency-exchange-service/currency-exchange/{from}/to/{to}")
 	CurrencyConversionBean getEchangeValue(@PathVariable("from") String from, @PathVariable("to") String to);
 
 }
